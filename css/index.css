@@ -605,6 +605,38 @@ kbd {
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
+body {
+  position: relative;
+}
+body::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  height: 100vh;
+  z-index: -2;
+  background: url("/assets/background1.png") no-repeat center/cover;
+}
+body::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(0,0,0,0.1);
+}
+.nightmode body::before {
+  background-color: rgba(0,0,0,0.6);
+}
 .container {
   white-space: normal;
   word-wrap: break-word;
@@ -720,10 +752,10 @@ kbd {
   height: 80vh;
 }
 .header-inner--bgcolor {
-  background-color: #333;
+  background-color: rgba(68,153,153,0.533);
 }
 .header-inner--height {
-  height: 50px !important;
+  height: 55px !important;
 }
 .header-nav {
   position: relative;
@@ -731,7 +763,7 @@ kbd {
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 50px;
+  height: 55px;
   -webkit-transition: -webkit-transform 0.2s ease-out, background-color 0.2s ease;
   -moz-transition: -moz-transform 0.2s ease-out, background-color 0.2s ease;
   -o-transition: -o-transform 0.2s ease-out, background-color 0.2s ease;
@@ -748,7 +780,7 @@ kbd {
 }
 .header-nav--sticky {
   position: fixed;
-  background-color: #333;
+  background-color: rgba(68,153,153,0.533);
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -o-transform: translateY(-100%);
@@ -787,7 +819,7 @@ kbd {
 .header-nav-menubtn {
   display: none;
   padding: 0 0.5rem;
-  line-height: 50px;
+  line-height: 55px;
   color: #f5f6f7;
   cursor: pointer;
 }
@@ -829,13 +861,13 @@ kbd {
 .header-nav-menu {
   display: none;
   height: 100%;
-  line-height: 50px;
+  line-height: 55px;
 }
 .header-nav-menu-item {
   float: left;
   position: relative;
   margin: 0 1rem 0 0;
-  height: 50px;
+  height: 55px;
   text-align: center;
   cursor: pointer;
 }
@@ -871,7 +903,7 @@ kbd {
   float: right;
   padding: 0 0.5rem;
   height: 100%;
-  line-height: 50px;
+  line-height: 55px;
   -webkit-box-align: center;
   -moz-box-align: center;
   -o-box-align: center;
@@ -2353,7 +2385,7 @@ kbd {
   .header-nav-menu {
     overflow: hidden;
     position: absolute;
-    top: 50px;
+    top: 55px;
     right: 0;
     left: 0;
     width: auto;
